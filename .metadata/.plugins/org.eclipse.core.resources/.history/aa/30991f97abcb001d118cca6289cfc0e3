@@ -1,0 +1,31 @@
+package org.exc;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Inputexcelfile extends Baseclass{
+	
+		
+	
+
+@Override
+public void createNewExcelfile(int rowNum, int cellNum, String writeData) throws IOException {
+	// TODO Auto-generated method stub
+	File f = new File("C:\\Users\\Sathya Rashmi\\Inmakes\\Dependencyproject\\Excel\\newfileexcel.xlsx");
+	super.createNewExcelfile(0, 0,"selenium");
+	createcell(0, 1, "Java");
+	createcell(0, 2, "DataDriven");
+	createcell(0, 3, "pom");
+	
+	createrow(1, 0, "Appium"); 
+	createrow(1, 2, "cucumber");
+	createrow(1, 3, "Junit");
+	createrow(1, 4, "TestNg");
+	
+	
+	
+	
+	
+}
+	
+}

@@ -1,0 +1,35 @@
+package org.exc;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Createnewexcel {
+	public static void main(String[] args) throws IOException {
+		  File f = new File("C:\\Users\\Sathya Rashmi\\Inmakes\\Dependencyproject\\Excel\\newfile.xlsx") ;
+			Workbook w = new XSSFWorkbook();
+			Sheet newSheet = w.createSheet("Datas");
+			Row newrow = newSheet.createRow(0);
+			Cell newcell = newrow.createCell(0);
+			newcell.setCellValue("Selenium");
+			Row newrow1 = newSheet.createRow(0);
+			Cell newcell1 = newrow.createCell(1);
+			newcell1.setCellValue("Java");
+			Row newrow2 = newSheet.createRow(1);
+			Cell newcell2 = newrow.createCell(0);
+			newcell2.setCellValue("Appium");
+			Row newrow3 = newSheet.createRow(0);
+			Cell newcell3 = newrow.createCell(0);
+			FileOutputStream fos = new FileOutputStream(f);
+			w.write(fos);
+		
+	}
+
+}

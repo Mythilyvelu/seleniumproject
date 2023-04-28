@@ -1,0 +1,70 @@
+package org.sam;
+
+import java.util.Date;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.exc.Baseclass;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class Samplejunit extends Baseclass {
+	@Test
+	public void tc3() {
+		System.out.println("Test Case3");
+		launchurl("https://inmakes.com/");
+
+	}
+
+	@Test
+	public void tc1() {
+		System.out.println("Test Case1");
+		launchurl("https://www.google.com/");
+
+	}
+
+	@Before
+	public void StartDate() {
+		Date d = new Date();
+		System.out.println(d);
+
+	}
+
+	@After
+	public void endDate() {
+		Date d = new Date();
+		System.out.println(d);
+
+	}
+
+	@BeforeClass
+	public static void launchBrowser() {
+		launchBrowser();
+		WindowMaximize();
+
+	}
+
+	@Test
+	public void tc2() {
+		System.out.println("Test Case2");
+		launchurl("https://en-gb.facebook.com/");
+
+	}
+
+	@AfterClass
+	public static void closeBrowser() {
+		closeEntireBrowser();
+
+	}
+
+	@Test
+	public void tc4() {
+		System.out.println("Test Case4");
+		launchurl("https://www.youtube.com/");
+
+	}
+
+}

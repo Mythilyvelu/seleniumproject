@@ -1,0 +1,48 @@
+package org.stepdefinition;
+
+import org.exc.Baseclass;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class Flipkartlogin extends Baseclass {
+	
+
+@Given("To launch the Chrome browser and maximise window")
+public void to_launch_the_Chrome_browser_and_maximise_window() {
+	launchbrowser();
+	WindowMaximize();
+}
+
+@When("To launch the url of the flipkart apllication")
+public void to_launch_the_url_of_the_flipkart_apllication() {
+	launchurl("https://affiliate.flipkart.com/login");
+    
+}
+
+@When("To pass valid username in email field")
+public void to_pass_valid_username_in_email_field() {
+	Flipkartlogin f = new Flipkartlogin();
+}
+
+@When("to pass valid password in password field")
+public void to_pass_valid_password_in_password_field() {
+    
+}
+
+@When("To click the login button")
+public void to_click_the_login_button() {
+}
+
+@When("TO check whether navigates to the home page or not")
+public void to_check_whether_navigates_to_the_home_page_or_not() {
+    
+}
+
+@Then("To close the browser")
+public void to_close_the_browser() {
+}
+
+}
